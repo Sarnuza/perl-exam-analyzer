@@ -1,0 +1,59 @@
+=head1 NAME
+
+LoadEXAM::Randomize - To load the exam file structrure into a hash
+
+=head1 VERSION
+
+This documentation refers to LoadExam::Randomize version 0.000001
+
+=head1 SYNOPSIS
+
+		use LoadEXAM::Randomize;
+
+This module takes an Array and shuffles its order.
+
+=head1 DESCRIPTION
+
+This module is used to rearrange the order of an array and therefore generate multiple variations of an examfile
+
+
+=head1 SUBROUTINES/METHODS
+
+randomize()
+
+=head2 ARGUMENTS
+
+To use this function needs a Filehandler and a string which specifies the file that serves as input
+
+=head3 EXAMPLE
+
+		randomize($fh, "examSolutions.txt");
+
+=head1 DIAGNOSTICS
+
+None found yet
+
+=head1 DEPENDENCIES
+
+experimental 'signatures'
+LoadEXAM::Grammar
+List::Util 'shuffle'
+POSIX
+
+=head1 INCOMPATIBILITIES
+
+Unknown yet
+
+=head1 BUGS AND LIMITATIONS
+
+Unknown yet. However, using Perl version 5.30.3 and higher is recommended
+
+=head1 AUTHOR
+
+Nils Wildhaber FHNW, Mike Gilgen FHNW
+
+=head1 LICENSE AND COPYRIGHT
+
+Copyright (c) 2022, FHNW. All rights reserved.
+
+This module is free software; you can redistribute it and/or modify it under the same terms as Perl itself.

@@ -1,0 +1,66 @@
+
+=head1 NAME
+
+LoadEXAM::Grammar - To load the exam file structrure into a hash
+
+=head1 VERSION
+
+This documentation refers to LoadExam::Grammar version 0.001
+
+=head1 SYNOPSIS
+
+		use <LoadEXAM::Grammar>;
+		This module is used to read the exam files and convert it to a hash datastructure
+
+=head1 DESCRIPTION
+
+This module is used to read the exam files and convert it to a hash datastructure. This is done by using a set of regular expressions describing the individual section that a string pattern represents.
+Example:
+
+1. How old are you?			-		Represents a question
+		[]	under 18
+		[]	over 18					-		Both represent a possible answer
+
+With this example the module would create hash with following structure:
+
+{
+		[
+		 { QA => {
+						"Question"	=> "How old are you?",
+						"Number"		=> 1,
+						"Answers"		=> [ "under 18", "over 18" ]
+						}
+		}
+		]
+}
+
+
+=head1 SUBROUTINES/METHODS
+
+load_exam()
+
+=head1 DIAGNOSTICS
+
+None
+
+=head1 DEPENDENCIES
+
+Regexp::Grammars
+
+=head1 INCOMPATIBILITIES
+
+Unknown yet
+
+=head1 BUGS AND LIMITATIONS
+
+Unknown yet. However, using Perl version 5.30.3 and higher is recommended
+
+=head1 AUTHOR
+
+FHNW
+
+=head1 LICENSE AND COPYRIGHT
+
+Copyright (c) 2022, FHNW. All rights reserved.
+
+This module is free software; you can redistribute it and/or modify it under the same terms as Perl itself.

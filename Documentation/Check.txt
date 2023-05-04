@@ -1,0 +1,58 @@
+NAME
+    LoadEXAM::Check - To load the exam file structrure into a hash
+
+VERSION
+    This documentation refers to LoadExam::Check version 0.000001
+
+SYNOPSIS
+    This module takes an Array and shuffles its order.
+
+                    use LoadEXAM::Check;
+
+DESCRIPTION
+    This module is used to rearrange the order of an array and therefore
+    generate multiple variations of an examfile
+
+SUBROUTINES/METHODS
+    check( $filehandler, @examfiles )
+    getCorrectAnswer( $hashref, $question )
+    printReport( $master_exam, $exam, $filename )
+    compareStrings()
+    normalize()
+    printStatistics()
+    printBelowExpectations()
+
+  Arguments
+    To use this function needs a Filehandler and a string which specifies
+    the output file's destination. check($filehandler, @examfiles)
+
+   Example
+                    check($fh, "file1", "/tmp/file2", "./exams/file3");
+
+DIAGNOSTICS
+    None found yet
+
+DEPENDENCIES
+                    - LoadEXAM::Grammar
+                    - POSIX
+                    - experimental 'signatures'
+                    - Lingua::StopWords qw( getStopWords )
+                    - Text::Levenshtein qw( distance )
+                    - List::Util qw( sum max min )
+
+INCOMPATIBILITIES
+    Unknown yet
+
+BUGS AND LIMITATIONS
+    Unknown yet. However, using Perl version 5.30.3 and higher is
+    recommended
+
+AUTHOR
+    Nils Wildhaber FHNW, Mike Gilgen FHNW
+
+LICENSE AND COPYRIGHT
+    Copyright (c) 2022, FHNW. All rights reserved.
+
+    This module is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+

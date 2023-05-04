@@ -1,0 +1,80 @@
+NAME
+
+    Perl Final Assignment
+
+VERSION
+
+    This documentation refers to Perl Final Assignment version 1.0.0
+
+DESCRIPTION
+
+    This Perl script produces exams and evaluates exam results handed in by
+    students It is done as the final project for the Introduction into Perl
+    class and covers the following scope:
+
+                    - part 1:               Core functionality and documentation (1a and 1b)
+                    - part 2:               Fuzzy matching of questions and answers
+                    - part 3:               Statistics and below expectation results
+
+    The code is splitted into modules:
+
+                    - randomize.pm
+                    - check.pm
+
+    Both modules have a short documentation as well.
+
+USAGE
+
+    To generate examfiles with shuffled question order: perl main.pl
+    --randomize <MASTERFILE>
+
+    To check an examfile with the masterfile: perl main.pl --check
+    <MASTERFILE> <EXAMFILE>
+
+REQUIRED ARGUMENTS
+
+    action - either randomize or check exam (see OPTIONS) filename - path
+    to textfile
+
+OPTIONS
+
+                    --randomize <masterfile>
+                    --check <masterfile> <examfile>
+
+DIAGNOSTICS
+
+    A list of every error and warning message
+
+CONFIGURATION AND ENVIRONMENT
+
+    Application owned libraries are located in the ./lib directory
+
+DEPENDENCIES
+
+    Following dependencies are required
+
+                    -       LoadEXAM::Grammar
+                    -       LoadEXAM::Randomize
+                    -       LoadEXAM::Check
+    
+                    -       experimental 'signatures'
+
+INCOMPATIBILITIES
+
+    Unknown yet
+
+BUGS AND LIMITATIONS
+
+    Bugs not known yet
+
+AUTHOR
+
+    Nils Wildhaber FHNW, Mike Gilgen FHNW
+
+LICENCE AND COPYRIGHT
+
+    Copyright (c) 2022, FHNW. All rights reserved.
+
+    This module is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
